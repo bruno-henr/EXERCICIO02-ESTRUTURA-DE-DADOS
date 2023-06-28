@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "lista_funcionarios_dinamico.h": "c",
+        "string.h": "c",
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "empresa.h": "c",
+        "lista_funcionarios.h": "c",
+        "lista.h": "c",
+        "funcionarios.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled",
+    "C_Cpp.dimInactiveRegions": false
+}
