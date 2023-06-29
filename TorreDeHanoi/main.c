@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "torre_hanoi.h"
+#include "torre_hanoi.c"
 
 int main() {
     int numDiscos;

@@ -6,5 +6,5 @@ struct processo {
 	Processo *prox;
 };
 
-
-
+struct processo* criarProcesso();
+void imprimirId(struct processo* p);

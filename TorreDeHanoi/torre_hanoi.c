@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "pilha.h"
+// #include "disco.h"
 #include "torre_hanoi.h"
 
 void imprimirTorre(Pilha* origem, Pilha* destino, Pilha* auxiliar) {
@@ -48,8 +49,9 @@ void torreDeHanoi(int numDiscos) {
 	int i;
     // Preenche a haste de origem
     for (i = numDiscos; i > 0; i--) {
-        Disco disco;
-        disco.diametro = i;
+        // Disco disco;
+        // disco.diametro = i;
+        Disco disco = criarDisco(i);
         empilhar(origem, disco);
     }
 

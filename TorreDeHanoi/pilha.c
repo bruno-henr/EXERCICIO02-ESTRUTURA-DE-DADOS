@@ -6,7 +6,8 @@ Pilha* criarPilha(int capacidade) {
     Pilha* pilha = (Pilha*)malloc(sizeof(Pilha));
     pilha->capacidade = capacidade;
     pilha->topo = -1;
-    pilha->array = (Disco*)malloc(capacidade * sizeof(Disco));
+    // pilha->array = (Disco*)malloc(capacidade * sizeof(Disco));
+    pilha->array = criarArrayDiscos(capacidade);
     return pilha;
 }
 

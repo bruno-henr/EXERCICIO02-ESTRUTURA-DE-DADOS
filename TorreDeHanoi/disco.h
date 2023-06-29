@@ -5,6 +5,9 @@ typedef struct {
     int diametro;
 } Disco;
 
+Disco criarDisco(int diametro);
+Disco* criarArrayDiscos(int capacidade);
+
 #endif
 
 

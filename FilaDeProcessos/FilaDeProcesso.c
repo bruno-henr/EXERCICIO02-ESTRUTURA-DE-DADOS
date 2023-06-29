@@ -8,11 +8,12 @@ struct fila {
 };
 
 struct processo *insere_fim(struct processo *fim, int id) {
-	struct processo *f = (struct processo *)malloc(sizeof(struct processo));
+	// struct processo *f = (struct processo *)malloc(sizeof(struct processo));
+	struct processo *f = criarProcesso();
 	f->id = id;
 	f->prox = NULL;
 
-	if (fim != NULL)  // verifica se a lista não estava vazia
+	if (fim != NULL)  // verifica se a lista nï¿½o estava vazia
 		fim->prox = f;
 	return f;
 }
@@ -31,7 +32,7 @@ int vazio(Fila *f) {
 }
 
 void insereProcesso(Fila *f, int id) {
-	f->fim = insere_fim(f->fim, id); /* Chama a função que insere no fim */
+	f->fim = insere_fim(f->fim, id); /* Chama a funï¿½ï¿½o que insere no fim */
 
 	if (f->inicio == NULL) /* fila antes vazia? */
 		f->inicio = f->fim;
@@ -41,7 +42,7 @@ void insereProcesso(Fila *f, int id) {
 
 void retiraProcesso(Fila *f) {
 	if (vazio(f) == 1) {
-		printf("Fila vazia, não há processos ativos no momento.\n");
+		printf("Fila vazia, nï¿½o hï¿½ processos ativos no momento.\n");
 	} else {
 		struct processo *p = f->inicio;
 		f->inicio = p->prox;
@@ -59,7 +60,8 @@ void imprimirProcessos(Fila *f) {
 		int total = 0;
 		struct processo *aux = f->inicio;
 		while (aux != NULL) {
-			printf("Processo ID#%d -> ", aux->id);
+			// printf("Processo ID#%d -> ", aux->id);
+			imprimirId(aux);
 			aux = aux->prox;
 			total++;
 		}
