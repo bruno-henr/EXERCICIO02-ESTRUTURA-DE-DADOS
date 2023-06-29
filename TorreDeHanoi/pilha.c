@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "pilha.h"
+#include "disco.c"
 
 Pilha* criarPilha(int capacidade) {
     Pilha* pilha = (Pilha*)malloc(sizeof(Pilha));

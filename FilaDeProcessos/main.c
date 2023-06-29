@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "FilaDeProcessos.h"
-#include "Processo.h"
+#include "FilaDeProcesso.c"
 
 int main() {
 	int escolha;
@@ -9,11 +8,11 @@ int main() {
 
 	do {
 		printf("========== MENU ==========\n");
-		printf("1 - Fila de processos dinâmica\n");
-		printf("2 - Fila de processos estática\n");
+		printf("1 - Fila de processos dinamica\n");
+		printf("2 - Fila de processos estatica\n");
 		printf("0 - Sair\n");
 		printf("==========================\n");
-		printf("Escolha uma opção: ");
+		printf("Escolha uma opÃ§Ã£o: ");
 		scanf("%d", &escolha);
 
 		switch (escolha) {
@@ -22,18 +21,18 @@ int main() {
 
 				if (fila == NULL) {
 					fila = criaFila();
-					printf("Fila de processos dinâmica criada.\n");
+					printf("Fila de processos dinamica criada.\n");
 				}
 
 				do {
-					printf("=========== MENU FILA DE PROCESSOS DINÂMICA ===========\n");
+					printf("=========== MENU FILA DE PROCESSOS DINAMICA ===========\n");
 					printf("1 - Inserir processo\n");
 					printf("2 - Imprimir processos\n");
 					printf("3 - Retirar processo\n");
 					printf("4 - Liberar fila\n");
 					printf("0 - Voltar\n");
 					printf("======================================================\n");
-					printf("Escolha uma opção: ");
+					printf("Escolha uma opÃ§ao: ");
 					scanf("%d", &opcao);
 
 					switch (opcao) {
@@ -53,13 +52,13 @@ int main() {
 						case 4:
 							liberar(fila);
 							fila = NULL;
-							printf("Fila de processos dinâmica liberada.\n");
+							printf("Fila de processos dinamica liberada.\n");
 							break;
 						case 0:
 							printf("Voltando para o menu principal...\n");
 							break;
 						default:
-							printf("Opção inválida. Tente novamente.\n");
+							printf("OpÃ§ao invalida. Tente novamente.\n");
 							break;
 					}
 				} while (opcao != 0);
@@ -87,7 +86,7 @@ int main() {
 				printf("Encerrando o programa...\n");
 				break;
 			default:
-				printf("Opção inválida. Tente novamente.\n");
+				printf("OpÃ§ao invalida. Tente novamente.\n");
 				break;
 		}
 	} while (escolha != 0);

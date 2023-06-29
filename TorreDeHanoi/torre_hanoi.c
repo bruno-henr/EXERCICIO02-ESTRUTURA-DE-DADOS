@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "pilha.h"
+#include <stdlib.h>
+#include "pilha.c"
 // #include "disco.h"
 #include "torre_hanoi.h"
 

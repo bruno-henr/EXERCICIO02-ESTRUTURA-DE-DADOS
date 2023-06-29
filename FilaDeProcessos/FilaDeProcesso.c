@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "FilaDeProcessos.h"
+#include "Processo.c"
 
 struct fila {
-	Processo *inicio;
-	Processo *fim;
+	struct processo *inicio;
+	struct processo *fim;
 };
 
 struct processo *insere_fim(struct processo *fim, int id) {

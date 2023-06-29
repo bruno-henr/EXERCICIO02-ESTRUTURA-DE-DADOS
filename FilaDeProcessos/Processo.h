@@ -1,9 +1,8 @@
 
-typedef struct processo Processo;
-
+/// @brief 
 struct processo {
 	int id;    // ID do processo
-	Processo *prox;
+	struct processo *prox;
 };
 
 struct processo* criarProcesso();
