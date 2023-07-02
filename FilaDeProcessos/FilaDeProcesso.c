@@ -18,20 +18,20 @@ struct processo *insere_fim(struct processo *fim, int id) {
 		fim->prox = f;
 	return f;
 }
-
+// Cria Fila
 Fila *criaFila() {
 	Fila *f = (Fila *)malloc(sizeof(Fila));
 	f->inicio = NULL;
 	f->fim = NULL;
 	return f;
 }
-
+// Só verifica se a fila está vazia
 int vazio(Fila *f) {
 	if (f->inicio == NULL)
 		return 1;
 	return 0;
 }
-
+// insere um novo processo na pilha
 void insereProcesso(Fila *f, int id) {
 	f->fim = insere_fim(f->fim, id); /* Chama a fun��o que insere no fim */
 
@@ -40,7 +40,7 @@ void insereProcesso(Fila *f, int id) {
 
 	printf("Processo adicionado com sucesso.\n");
 }
-
+//Remove o primeiro processo da fila
 void retiraProcesso(Fila *f) {
 	if (vazio(f) == 1) {
 		printf("Fila vazia, n�o h� processos ativos no momento.\n");
@@ -53,7 +53,7 @@ void retiraProcesso(Fila *f) {
 	}
 	printf("Processo retirado com sucesso.\n");
 }
-
+// Imprime todos os processos da fila
 void imprimirProcessos(Fila *f) {
 	if (f->inicio == NULL)
 		printf("Fila vazia!\n");
@@ -69,7 +69,7 @@ void imprimirProcessos(Fila *f) {
 		printf("\n%d processos no total\n\n", total);
 	}
 }
-
+// Limpa a fila
 void liberar(Fila *f) {
 	struct processo *p = f->inicio;
 	while (p != NULL) {

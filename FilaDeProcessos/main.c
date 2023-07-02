@@ -12,7 +12,7 @@ int main() {
 		printf("2 - Fila de processos estatica\n");
 		printf("0 - Sair\n");
 		printf("==========================\n");
-		printf("Escolha uma opção: ");
+		printf("Escolha uma op��o: ");
 		scanf("%d", &escolha);
 
 		switch (escolha) {
@@ -32,7 +32,7 @@ int main() {
 					printf("4 - Liberar fila\n");
 					printf("0 - Voltar\n");
 					printf("======================================================\n");
-					printf("Escolha uma opçao: ");
+					printf("Escolha uma op��o: ");
 					scanf("%d", &opcao);
 
 					switch (opcao) {
@@ -51,14 +51,15 @@ int main() {
 							break;
 						case 4:
 							liberar(fila);
-							fila = NULL;
+							fila->inicio = NULL;
+							//fila = NULL;
 							printf("Fila de processos dinamica liberada.\n");
 							break;
 						case 0:
 							printf("Voltando para o menu principal...\n");
 							break;
 						default:
-							printf("Opçao invalida. Tente novamente.\n");
+							printf("Op��o invalida. Tente novamente.\n");
 							break;
 					}
 				} while (opcao != 0);
@@ -86,7 +87,7 @@ int main() {
 				printf("Encerrando o programa...\n");
 				break;
 			default:
-				printf("Opçao invalida. Tente novamente.\n");
+				printf("Op��o invalida. Tente novamente.\n");
 				break;
 		}
 	} while (escolha != 0);
